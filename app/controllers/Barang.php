@@ -107,6 +107,8 @@ class Barang extends Controller
   {
     $data['barang'] = $this->model('BarangModel')->getDetailBarang($id_barang);
     $data['user'] = $this->model('UserModel')->getDetailUser($data['barang']['id_user']);
+    // print_r($data);
+    // exit();
     $this->view('templates/start');
     $this->view('barang/detail_barang', $data);
     $this->view('templates/end');

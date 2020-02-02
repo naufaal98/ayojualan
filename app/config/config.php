@@ -1,6 +1,6 @@
 <?php
 
-define('BASE_URL', 'http://localhost:8080/ayojualan/public');
+define('BASE_URL', 'http://localhost:8080/ayojualan2/public');
 
 //db'
 define('DB_HOST','localhost');
