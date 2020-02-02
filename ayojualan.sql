@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 02, 2020 at 12:03 AM
+-- Generation Time: Feb 02, 2020 at 12:16 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -39,6 +39,13 @@ CREATE TABLE `barang` (
   `id_kategori` int(2) NOT NULL,
   `id_user` int(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `barang`
+--
+
+INSERT INTO `barang` (`id`, `created_at`, `nama_barang`, `deskripsi_barang`, `img_barang`, `harga_barang`, `status`, `id_kategori`, `id_user`) VALUES
+(5, '2020-02-02 00:15:23', 'Jersey Timnas Indonesia', 'Kaos Timnas Indonesia', '0NpfChn48oQnNpI.jpeg', '150000', 'Belum Terjual', 4, 2);
 
 -- --------------------------------------------------------
 
@@ -119,7 +126,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `kategori`
