@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 02, 2020 at 12:16 AM
+-- Generation Time: Feb 02, 2020 at 02:42 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -45,7 +45,8 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id`, `created_at`, `nama_barang`, `deskripsi_barang`, `img_barang`, `harga_barang`, `status`, `id_kategori`, `id_user`) VALUES
-(5, '2020-02-02 00:15:23', 'Jersey Timnas Indonesia', 'Kaos Timnas Indonesia', '0NpfChn48oQnNpI.jpeg', '150000', 'Belum Terjual', 4, 2);
+(5, '2020-02-02 00:15:23', 'Jersey Timnas Indonesia', 'Kaos Timnas Indonesia', '0NpfChn48oQnNpI.jpeg', '150000', 'Belum Terjual', 4, 2),
+(7, '2020-02-02 01:48:21', 'Meja Kantor Baru', 'Meja Kantor Baru', 'X5EmdfuCOhCJcVh.jpg', '1500000', 'Belum Terjual', 3, 13);
 
 -- --------------------------------------------------------
 
@@ -92,7 +93,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`, `nama_lengkap`, `email`, `no_hp`) VALUES
 (2, 'naufaal98', '21232f297a57a5a743894a0e4a801fc3', 'Muhammad Naufal', 'muhammad_naufal@hotmail.com', '087878787898'),
-(10, 'bepe20', '5f4dcc3b5aa765d61d8327deb882cf99', 'Bambang Pamungkas', 'bepe@gmail.com', '+62828282828');
+(12, 'bepe20', '0192023a7bbd73250516f069df18b500', 'Bambang Pamungkas', 'bepe@gmail.com', '0823672333434'),
+(13, 'cristiano7', '482c811da5d5b4bc6d497ffa98491e38', 'Cristiano Ronaldo', 'cr7@email.com', '087878787898'),
+(14, 'leomessi10', 'd41d8cd98f00b204e9800998ecf8427e', 'Lionel Messi', 'messi@gmail.com', '08236723454545');
 
 --
 -- Indexes for dumped tables
@@ -126,7 +129,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `kategori`
@@ -138,7 +141,7 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
