@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 01, 2020 at 10:32 PM
+-- Generation Time: Feb 02, 2020 at 12:03 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -39,15 +39,6 @@ CREATE TABLE `barang` (
   `id_kategori` int(2) NOT NULL,
   `id_user` int(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `barang`
---
-
-INSERT INTO `barang` (`id`, `created_at`, `nama_barang`, `deskripsi_barang`, `img_barang`, `harga_barang`, `status`, `id_kategori`, `id_user`) VALUES
-(1, '2020-02-01 20:06:47', 'Meja Kantor', 'Meja Kantor Test', 'QEMt3lKUlvvYW3J.jpg', '2000000', 'Belum Terjual', 3, 2),
-(2, '2020-02-01 20:06:46', 'Kaos Polos Hitam Yoo', 'Kaos Polos Hitam', 'YI1jfMdsQ6TKHbw.jpg', '150000', 'Belum Terjual', 5, 2),
-(3, '2020-02-01 18:20:33', 'Jersey Timnas Indonesia', 'Jersey timnas Indonesia', 'WSxMRdXmGihELOt.jpeg', '120000', 'Belum Terjual', 4, 10);
 
 -- --------------------------------------------------------
 
@@ -93,7 +84,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `nama_lengkap`, `email`, `no_hp`) VALUES
-(2, 'naufaal98', '5f4dcc3b5aa765d61d8327deb882cf99', 'Muhammad Naufal', 'muhammad_naufal@hotmail.com', 'Test'),
+(2, 'naufaal98', '21232f297a57a5a743894a0e4a801fc3', 'Muhammad Naufal', 'muhammad_naufal@hotmail.com', '087878787898'),
 (10, 'bepe20', '5f4dcc3b5aa765d61d8327deb882cf99', 'Bambang Pamungkas', 'bepe@gmail.com', '+62828282828');
 
 --
@@ -128,7 +119,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `kategori`
