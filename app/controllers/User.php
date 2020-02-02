@@ -31,7 +31,7 @@ class User extends Controller
     }
   }
 
-  public function signup()
+  public function signUp()
   {
     $this->view('templates/start');
     $this->view('user/signup');
@@ -95,7 +95,8 @@ class User extends Controller
     return isset($_SESSION['user_id']);
   }
 
-  public function logout () {
+  public function logout ()
+  {
     session_destroy();
     header('Location:'.BASE_URL.'/');
   }

@@ -10,8 +10,8 @@ class BarangModel {
   }
 
   public function getAllBarang()
-	{
-		$this->db->query("SELECT * FROM $this->table WHERE status='Belum Terjual' ORDER BY created_at DESC");
+  {
+    $this->db->query("SELECT * FROM $this->table WHERE status='Belum Terjual' ORDER BY created_at DESC");
     return $this->db->resultSet();
   }
 
@@ -28,7 +28,21 @@ class BarangModel {
     $this->db->bind('id_barang', $id_barang);
     return $this->db->single();
   }
-  
+
+  public function barangSaya ($user_id)
+  {
+    $session_user_id = $_SESSION['user_id'];
+    if (!isset($session_user_id) || $session_user_id !== $user_id) {
+      header('Location:'.BASE_URL.'/user/login');
+    }
+
+    $data['all_barang'] = $this->model('BarangModel')->getALlBarangSaya($user_id);
+
+    $this->view('templates/start');
+    $this->view('barang/barang_saya', $data);
+    $this->view('templates/end');
+  }
+
   public function addBarang($data, $img_name, $user_id)
 	{
 		$query = "INSERT INTO $this->table 
@@ -122,4 +136,5 @@ class BarangModel {
     );
     return $this->db->resultSet();
   }
+
 }

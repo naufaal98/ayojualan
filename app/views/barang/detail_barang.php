@@ -5,7 +5,7 @@
         <div class="card my-4">
           <div class="card-body">
             <h3 class="mb-2"><?= $data['barang']['nama_barang']?></h3>
-            <p class="text-muted"> Posted on <?= $data['barang']['created_at'] ?></p>
+            <p class="text-muted"> Dipasang pada <?= date_format(date_create($data['barang']['created_at']), 'd F Y') ?></p>
             <hr>
             <img class="img-fluid rounded" src="<?= BASE_URL . '/img/' . $data['barang']['img_barang'] ?>">
             <hr>

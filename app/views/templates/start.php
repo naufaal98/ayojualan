@@ -67,16 +67,16 @@
 				</div>
 				<div class="col-md-5 d-flex justify-content-end align-items-left">
 					<a class="btn btn-primary mr-2" href="<?= BASE_URL ?>/barang/jual">Jual Barang</a>
-					<?php if(!isset($data['user'])) : ?>
+					<?php if(!isset($data['user_session'])) : ?>
 						<a class="btn btn-outline-primary mr-2" href="<?= BASE_URL ?>/user/login">Log in</a>
 					<?php else : ?>
 						<div class="dropdown">
 							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<?= $data['user']['username'] ?>
+								<?= $data['user_session']['username'] ?>
 							</button>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-								<a class="dropdown-item" href="<?= BASE_URL ?>/user/edit/<?= $data['user']['id'] ?>">Edit Profile</a>
-								<a class="dropdown-item" href="<?= BASE_URL ?>/barang/barangsaya/<?= $data['user']['id'] ?>">Barang Saya</a>
+								<a class="dropdown-item" href="<?= BASE_URL ?>/user/edit/<?= $data['user_session']['id'] ?>">Edit Profile</a>
+								<a class="dropdown-item" href="<?= BASE_URL ?>/barang/barangsaya/<?= $data['user_session']['id'] ?>">Barang Saya</a>
 								<a class="dropdown-item" href="<?= BASE_URL ?>/user/logout">Log out</a>
 							</div>
 						</div>

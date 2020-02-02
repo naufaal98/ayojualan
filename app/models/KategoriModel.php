@@ -8,17 +8,18 @@ class KategoriModel {
 	{
 		$this->db = new Database;
   }
-  
+
   public function getAllKategori()
-	{
-		$this->db->query('SELECT * FROM '. $this->table);
+  {
+    $this->db->query("SELECT * FROM $this->table");
     return $this->db->resultSet();
-	}
-	
-	public function getDetailKategori($id_kategori)
+  }
+
+  public function getDetailKategori($id_kategori)
 	{
 		$this->db->query("SELECT * FROM $this->table where id=:id_kategori");
     $this->db->bind('id_kategori', $id_kategori);
     return $this->db->single();
 	}
+
 }

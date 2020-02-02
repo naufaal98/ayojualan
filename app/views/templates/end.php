@@ -1,4 +1,4 @@
-  <footer class="footer mt-auto py-3 text-center">
+<footer class="footer mt-auto py-3 text-center">
     <hr>
     <div class="container">
       <span class="text-muted">&copy; AyoJualan <?= date("Y"); ?></span>

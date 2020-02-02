@@ -4,9 +4,9 @@ class Controller
 {
 	public function view($view,$data=[])
 	{
-		$data['kategori'] = $this->model('KategoriModel')->getAllKategori();
+		$data['kategori'] = $data['kategori'] = $this->model('KategoriModel')->getAllKategori();
 		if (isset($_SESSION['user_id'])) {
-			$data['user'] = $this->model('UserModel')->getDetailUser($_SESSION['user_id']);
+			$data['user_session'] = $this->model('UserModel')->getDetailUser($_SESSION['user_id']);
 		}
 		require_once '../app/views/' . $view.'.php';
 	}

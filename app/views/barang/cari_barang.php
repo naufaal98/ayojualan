@@ -2,7 +2,7 @@
   <div class="container">
     <h3 class="main-title">Barang dengan keyword '<?= $data['keyword'] ?>' </h3>
     <?php if (count($data['barang']) < 1) : ?>
-      <p> Belum ada barang yang di jual di kategori ini </p>
+      <p> Barang yang anda cari tidak ditemukan. </p>
     <?php else: ?>
       <div class="row">
         <?php foreach($data['barang'] as $barang) : ?>
