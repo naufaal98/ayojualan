@@ -70,8 +70,15 @@
 					<?php if(!isset($_SESSION['user_id'])) : ?>
 						<a class="btn btn-outline-primary mr-2" href="<?= BASE_URL ?>/user/login">Log in</a>
 					<?php else : ?>
-						<a class="btn btn-success mr-2" href="<?= BASE_URL ?>/barang/barangsaya/<?= $_SESSION['user_id'] ?>">Barang Saya</a>
-						<a class="btn btn-outline-primary mr-2" href="<?= BASE_URL ?>/user/logout">Log out</a>
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Dropdown button
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="<?= BASE_URL ?>/barang/barangsaya/<?= $_SESSION['user_id'] ?>">Barang Saya</a>
+								<a class="dropdown-item" href="<?= BASE_URL ?>/user/logout">Log out</a>
+							</div>
+						</div>
 					<?php endif ?>
 				</div>
 			</div>
@@ -81,8 +88,8 @@
 	<div class="bg-dark shadow-sm d-flex align-items-center justify-content-center">
 			<nav class="nav nav-underline">
 				<a class="nav-link text-white-50"><span>Kategori:</span></a>
-				<? foreach ($data['kategori'] as $kategori) : ?>
+				<?php foreach ($data['kategori'] as $kategori) : ?>
 					<a class="nav-link text-light" href="<?= BASE_URL.'/barang/kategori/'.$kategori['id'] ?>"><?= $kategori['nama_kategori'] ?></a>
-				<? endforeach; ?>
+				<?php endforeach; ?>
 			</nav>
 	</div>

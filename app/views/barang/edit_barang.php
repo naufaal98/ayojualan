@@ -25,11 +25,11 @@
     <div class="form-group">
       <label for="kategori">Kategori</label>
       <select class="form-control" name="id_kategori" id="kategori">
-        <? foreach($data['kategori'] as $kategori): ?>
-          <option value="<? echo $kategori['id'] ?>" <?= $kategori['id'] === $data['barang']['id_kategori'] ? "selected" : "" ?>>
-            <? echo $kategori['nama_kategori'] ?>
+        <?php foreach($data['kategori'] as $kategori): ?>
+          <option value="<?php echo $kategori['id'] ?>" <?= $kategori['id'] === $data['barang']['id_kategori'] ? "selected" : "" ?>>
+            <?php echo $kategori['nama_kategori'] ?>
           </option>
-        <? endforeach; ?>
+        <?php endforeach; ?>
       </select>
     </div>
     <input type="hidden" name="id_barang" value="<?= $data['barang']['id'] ?>">

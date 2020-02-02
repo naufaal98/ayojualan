@@ -22,11 +22,11 @@
     <div class="form-group">
       <label for="kategori">Kategori</label>
       <select class="form-control" name="id_kategori" id="kategori">
-        <? foreach($data['kategori'] as $kategori): ?>
-          <option value="<? echo $kategori['id'] ?>">
-            <? echo $kategori['nama_kategori'] ?>
+        <?php foreach($data['kategori'] as $kategori): ?>
+          <option value="<?php echo $kategori['id'] ?>">
+            <?php echo $kategori['nama_kategori'] ?>
           </option>
-        <? endforeach; ?>
+        <?php endforeach; ?>
       </select>
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Jual Barang</button>

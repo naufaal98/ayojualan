@@ -1,11 +1,11 @@
 <main>
   <div class="container">
     <h3 class="main-title">Barang dengan keyword '<?= $data['keyword'] ?>' </h3>
-    <? if (count($data['barang']) < 1) : ?>
+    <?php if (count($data['barang']) < 1) : ?>
       <p> Belum ada barang yang di jual di kategori ini </p>
-    <? else: ?>
+    <?php else: ?>
       <div class="row">
-        <? foreach($data['barang'] as $barang) : ?>
+        <?php foreach($data['barang'] as $barang) : ?>
           <div class="col-md-3 card-barang">
             <a href="<?= BASE_URL . '/barang/detail/' . $barang['id'] ?>">
               <div class="card mb-4 shadow-sm">
@@ -21,8 +21,8 @@
               </div>
             </a>
           </div>
-        <? endforeach ?>
+        <?php endforeach ?>
       </div>
-    <? endif; ?>
+    <?php endif; ?>
   </div><!-- ./container -->
 </main>

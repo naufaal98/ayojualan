@@ -2,7 +2,7 @@
 	<div class="container">
 		<h3 class="main-title">Barang Terbaru</h3>
 		<div class="row">
-			<? foreach($data['all_barang'] as $barang) : ?>
+			<?php foreach($data['all_barang'] as $barang) : ?>
 				<div class="col-md-3 card-barang">
 					<a href="<?= BASE_URL . '/barang/detail/' . $barang['id'] ?>">
 						<div class="card mb-4 shadow-sm">
@@ -18,7 +18,7 @@
 						</div>
 					</a>
 				</div>
-			<? endforeach ?>
+			<?php endforeach ?>
 		</div>
 	</div><!-- ./container -->
 </main>
