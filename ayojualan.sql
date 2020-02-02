@@ -46,7 +46,7 @@ CREATE TABLE `barang` (
 
 INSERT INTO `barang` (`id`, `created_at`, `nama_barang`, `deskripsi_barang`, `img_barang`, `harga_barang`, `status`, `id_kategori`, `id_user`) VALUES
 (5, '2020-02-02 00:15:23', 'Jersey Timnas Indonesia', 'Kaos Timnas Indonesia', '0NpfChn48oQnNpI.jpeg', '150000', 'Belum Terjual', 4, 2),
-(7, '2020-02-02 01:48:21', 'Meja Kantor Baru', 'Meja Kantor Baru', 'X5EmdfuCOhCJcVh.jpg', '1500000', 'Belum Terjual', 3, 13);
+(7, '2020-02-02 01:48:21', 'Meja Kantor Baru', 'Meja Kantor Baru', 'r3WqF34ibsTetYH.jpg', '1500000', 'Belum Terjual', 3, 13);
 
 -- --------------------------------------------------------
 
