@@ -65,7 +65,33 @@ class User extends Controller
     }
   }
 
-  public function checkSessionLogin () {
+  public function edit ($id_user) 
+  {
+    $data['user'] = $this->model('UserModel')->getDetailUser($id_user);
+    $this->view('templates/start');
+    $this->view('user/edit_user', $data);
+    $this->view('templates/end');
+  }
+
+  public function postUpdate() 
+  {
+    $user_id = $_POST['user_id'];
+    $session_user_id = $_SESSION['user_id'];
+    if (!isset($session_user_id) || $session_user_id !== $user_id) {
+      header('Location:'.BASE_URL.'/user/login');
+    }
+
+    if ($this->model('UserModel')->updateUser($_POST) > 0) {
+      Flasher::setFlash('Berhasil mengupdate profile', 'success');
+      header('Location:'.BASE_URL.'/user/edit/'.$user_id);
+    } else {
+      Flasher::setFlash('Gagal mengupdate profile', 'danger');
+      header('Location:'.BASE_URL.'/user/edit/'.$user_id);
+    }
+  }
+
+  public function checkSessionLogin () 
+  {
     return isset($_SESSION['user_id']);
   }
 

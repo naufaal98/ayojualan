@@ -33,7 +33,8 @@ class BarangModel {
 	{
 		$query = "INSERT INTO $this->table 
 			VALUES(
-				NULL, 
+				NULL,
+        :created_at,
 				:nama_barang, 
 				:deskripsi_barang,
 				:img_barang, 

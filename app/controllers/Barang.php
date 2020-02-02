@@ -27,6 +27,7 @@ class Barang extends Controller
 
     // Ambil URL untuk di slice
     $root = dirname(__FILE__);
+    $root = str_replace('\\', '/', $root);
     $root = explode("/", $root, -2);
     $target_dir = implode("/", $root) . "/public/img/";
     $target_file = $target_dir . basename($_FILES["img_barang"]["name"]);
@@ -133,6 +134,7 @@ class Barang extends Controller
     if (!$_FILES["img_barang"]["error"] == 4) {
       // Ambil URL untuk di slice
       $root = dirname(__FILE__);
+      $root = str_replace('\\', '/', $root);
       $root = explode("/", $root, -2);
       $target_dir = implode("/", $root) . "/public/img/";
       $target_file = $target_dir . basename($_FILES["img_barang"]["name"]);

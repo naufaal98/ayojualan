@@ -67,4 +67,36 @@ class UserModel {
 		return $this->db->single();
 	}
 
+	public function updateUser($data) 
+	{
+		if ($data['password'] === NULL) {
+			$query = "UPDATE $this->table SET 
+				username=:username,
+				nama_lengkap=:nama_lengkap,
+				email=:email,
+				no_hp=:no_hp
+				WHERE id=:user_id
+			";
+			$this->db->query($query);
+		} else {
+			$query = "UPDATE $this->table SET 
+				username=:username,
+				nama_lengkap=:nama_lengkap,
+				password=:password,
+				email=:email,
+				no_hp=:no_hp
+				WHERE id=:user_id
+			";
+			$this->db->query($query);
+			$this->db->bind('password', md5($data['password']));
+		}
+
+		$this->db->bind('username', $data['username']);
+		$this->db->bind('nama_lengkap', $data['nama_lengkap']);
+		$this->db->bind('email', $data['email']);
+		$this->db->bind('no_hp', $data['no_hp']);
+		$this->db->bind('user_id', $data['user_id']);
+		$this->db->execute();
+		return $this->db->rowCount();
+	}
 }

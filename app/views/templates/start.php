@@ -75,6 +75,7 @@
 								<?= $data['user']['username'] ?>
 							</button>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="<?= BASE_URL ?>/user/edit/<?= $data['user']['id'] ?>">Edit Profile</a>
 								<a class="dropdown-item" href="<?= BASE_URL ?>/barang/barangsaya/<?= $data['user']['id'] ?>">Barang Saya</a>
 								<a class="dropdown-item" href="<?= BASE_URL ?>/user/logout">Log out</a>
 							</div>
