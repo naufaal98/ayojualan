@@ -2,11 +2,11 @@
 	<div class="container">
 		<?php Flasher::flash(); ?>
 		<h3 class="main-title">Barang Saya </h2>
-		<? if (count($data['all_barang']) < 1) : ?>
+		<?php if (count($data['all_barang']) < 1) : ?>
 			<p> Belum ada barang yang anda jual </p>
-		<? else: ?>
+		<?php else: ?>
 			<div class="row">
-				<? foreach($data['all_barang'] as $barang) : ?>
+				<?php foreach($data['all_barang'] as $barang) : ?>
 					<div class="col-md-3 card-barang">
 						<a href="<?= BASE_URL . '/barang/detail/' . $barang['id'] ?>">
 							<div class="card mb-4 shadow-sm">
@@ -20,17 +20,17 @@
 									<p class="card-text"><?= $barang['deskripsi_barang'] ?></p>
 									<a href="<?= BASE_URL . '/barang/detail/' . $barang['id'] ?>" class="btn btn-sm mt-2 mr-1 btn-outline-secondary">View</a>
 									<a href="<?= BASE_URL . '/barang/edit/' . $barang['id'] ?>" class="btn btn-sm mt-2 btn-outline-secondary">Edit</a>
-									<? if ($barang['status'] !== 'Terjual') : ?>
+									<?php if ($barang['status'] !== 'Terjual') : ?>
 										<a href="<?= BASE_URL . '/barang/updatestatus/' . $barang['id'] ?>" class="btn btn-sm btn-primary btn-block active mt-2" role="button">Ubah Status Barang Menjadi Terjual</a>
-									<? else : ?>
+									<?php else : ?>
 										<a href="<?= BASE_URL . '/barang/updatestatus/' . $barang['id'] ?>" class="btn btn-sm btn-secondary btn-block active mt-2" role="button">Ubah Status Barang Menjadi Belum Terjual</a>
-									<? endif; ?>
+									<?php endif; ?>
 								</div>
 							</div>
 						</a>
 					</div>
-				<? endforeach ?>
+				<?php endforeach ?>
 			</div>
-		<? endif; ?>
+		<?php endif; ?>
 	</div><!-- ./container -->
 </main>

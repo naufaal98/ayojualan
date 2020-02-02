@@ -67,15 +67,15 @@
 				</div>
 				<div class="col-md-5 d-flex justify-content-end align-items-left">
 					<a class="btn btn-primary mr-2" href="<?= BASE_URL ?>/barang/jual">Jual Barang</a>
-					<?php if(!isset($_SESSION['user_id'])) : ?>
+					<?php if(!isset($data['user'])) : ?>
 						<a class="btn btn-outline-primary mr-2" href="<?= BASE_URL ?>/user/login">Log in</a>
 					<?php else : ?>
 						<div class="dropdown">
 							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Dropdown button
+								<?= $data['user']['username'] ?>
 							</button>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-								<a class="dropdown-item" href="<?= BASE_URL ?>/barang/barangsaya/<?= $_SESSION['user_id'] ?>">Barang Saya</a>
+								<a class="dropdown-item" href="<?= BASE_URL ?>/barang/barangsaya/<?= $data['user']['id'] ?>">Barang Saya</a>
 								<a class="dropdown-item" href="<?= BASE_URL ?>/user/logout">Log out</a>
 							</div>
 						</div>
